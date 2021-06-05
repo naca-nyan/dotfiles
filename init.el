@@ -3,8 +3,6 @@
 ;;; Nya-n
 ;;; Code:
 
-(setq byte-compile-warnings '(not cl-functions obsolete))
-
 (eval-and-compile
   (customize-set-variable
    'package-archives '(("gnu"   . "https://elpa.gnu.org/packages/")
