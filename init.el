@@ -63,7 +63,7 @@
    (inhibit-startup-screen . t)
    (custom-enabled-themes . '(misterioso))
    (indent-tabs-mode . nil)
-   (c-basic-offset . 2))
+   (c-basic-offset . 4))
   :config
   (defalias 'yes-or-no-p 'y-or-n-p)
   (keyboard-translate ?\C-h ?\C-?))
@@ -128,13 +128,16 @@
   :custom ((default-tab-width . 2)
            (indent-tabs-mode . nil)))
 
-(set-face-font 'default "Consolas-11")
-(set-coding-system-priority 'utf-8)
-(setq-default buffer-file-coding-system 'utf-8-unix)
+(leaf font-for-win
+  :if (eq system-type 'windows-nt)
+  :config
+  (set-face-font 'default "Consolas-11")
+  (set-coding-system-priority 'utf-8)
+  (setq-default buffer-file-coding-system 'utf-8-unix))
 
-;; Local Variables:
-;; byte-compile-warnings: (not cl-functions obsolete)
-;; End:
+(leaf shader-mode
+  :config
+  (add-to-list 'auto-mode-alist '("\\.shader\\'" . shader-mode)))
 
 (provide 'init)
 ;;; init.el ends here
