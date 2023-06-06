@@ -1,0 +1,19 @@
+[init]
+        defaultBranch = main
+[user]
+        email = naca.nyan@gmail.com
+        name = naca-nyan
+[alias]
+        st = status
+        ci = commit
+        br = branch
+        rb = rebase
+        ch = checkout
+        re = reset
+        sw = switch
+        chp = cherry-pick
+        logg = log --graph --oneline
+[url "git@github.com:"]
+        insteadOf = https://github.com
+[core]
+        editor = emacs
