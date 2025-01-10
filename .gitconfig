@@ -13,7 +13,7 @@
         sw = switch
         chp = cherry-pick
         logg = log --graph --oneline
-[url "git@github.com:"]
-        insteadOf = https://github.com
+[url "git@github.com:naca-nyan"]
+        insteadOf = https://github.com/naca-nyan
 [core]
         editor = emacs
